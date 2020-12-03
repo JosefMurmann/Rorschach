@@ -7,9 +7,10 @@ let ypos
 let xpos1 = xpos;
 let ypos1 = ypos;
 function setup() {
-  let canvas = createCanvas(1200, 700);
+  let canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent("p5Canvas")
-  background(255, 255, 255);
+  stroke(255, 0, 85)
+  background(173, 216, 230);
   fill(0, 0, 0);
   frameRate(1000);
   xpos=sin(count)*noise(n, 0)*200 + width/2;
@@ -32,7 +33,7 @@ function draw() {
   ypos1 = ypos;
   }
   if (count <0.05){
-    background(255,255,255);
+    background(173, 216, 230);
     let timer = random(8.5,10.5);
     count = count+0.1;
     xpos1 = sin(count)*(1*noise(n, 0))*350 + width/2;
@@ -43,7 +44,7 @@ function draw() {
     console.log("click!" + numb + timer);
     count = 0;
     numb++;
-    background(255, 255, 255);
+    background(173, 216, 230);
     timer = random(7.5,9.5);
   }
     if (numb == 10000){
