@@ -17,6 +17,7 @@ function setup() {
    for (let i = 0; i < 200; i++) {
     asteroids.push(new Roid());
   }
+  
 }
 
 function draw() {
